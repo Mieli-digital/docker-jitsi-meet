@@ -40,7 +40,7 @@ services:
             - JIBRI_RECORDER_PASSWORD
             - ENABLE_RECORDING
         networks:
-            meet.jitsi:
+            meet.mieli:
                 aliases:
                     - ${XMPP_DOMAIN}
 
@@ -106,7 +106,7 @@ services:
             - LOG_LEVEL
             - TZ
         networks:
-            meet.jitsi:
+            meet.mieli:
                 aliases:
                     - ${XMPP_SERVER}
 
@@ -137,7 +137,7 @@ services:
         depends_on:
             - prosody
         networks:
-            meet.jitsi:
+            meet.mieli:
 
     # Video bridge
     jvb:
@@ -165,8 +165,8 @@ services:
         depends_on:
             - prosody
         networks:
-            meet.jitsi:
+            meet.mieli:
 
 # Custom network so all services can communicate using a FQDN
 networks:
-    meet.jitsi:
+    meet.mieli:
